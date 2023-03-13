@@ -1,0 +1,23 @@
+<h2 align="center">Liste des candidats</h2>
+
+<table border="1" class="table">
+  <tr><th>Nom</th><th>Email</th><th>Age</th></tr>
+  <tr *ngFor="let stagiaire of stagiaires">
+    <td>{{stagiaire.nom}}</td>
+    <td>{{stagiaire.email}}</td>
+    <td>{{stagiaire.age}}</td>
+  </tr>
+</table>
+
+
+<table border="1" class="table">
+  <tr><th>ID</th><th>Name</th><th>Username</th><th>Email</th><th>Address</th></tr>
+  <tr *ngFor="let candidat of mesCandidats">
+    <td>{{candidat.id}}</td>
+    <td>{{candidat.name}}</td>
+    <td>{{candidat.username}}</td>
+    <td>{{candidat.email}}</td>
+    <td>{{candidat.address.street}}</td>
+  </tr>
+</table>
+

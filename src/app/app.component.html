@@ -13,3 +13,8 @@
 <button class="btn btn-warning">Cliquer</button>
 
 Je suis en formation : {{formation}}
+
+<ul>
+  <li *ngFor="let candidat of candidats">{{candidat|addIng}}</li>
+</ul>
+<app-list-candidat></app-list-candidat>
