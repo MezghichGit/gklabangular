@@ -26,4 +26,8 @@ export class ProviderService {
   updateProvider(id:any, provider:any){
     return this.http.put(this.baseUrl+id,provider);
   }
+
+  getProvider(id:any){
+    return this.http.get(this.baseUrl+id);
+  }
 }
