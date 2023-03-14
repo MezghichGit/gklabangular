@@ -1,0 +1,25 @@
+<h2 align="center">Formulaire de contact</h2>
+
+<form #myform="ngForm" (ngSubmit)="handleMyForm(myform)">
+
+  <div class="form-group">
+    <label for="nom">Nom</label>
+    <input name="nom" ngModel type="text" class="form-control" id="nom" aria-describedby="emailHelp" placeholder="Enter name">
+
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input name="email" ngModel type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+
+  </div>
+  <div class="form-group">
+    <label  for="message">Message</label>
+   <textarea name="message" ngModel id="message" class="form-control" placeholder="Taper votre message"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+Formation : <input type="text" [(ngModel)]="formation" /> {{formation}}
+
+<hr/>
