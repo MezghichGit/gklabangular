@@ -1,26 +1,6 @@
 <h1 align="center">Hello GK</h1>
 
-<app-navbar></app-navbar>
+<app-navbar (eventToSend)='processEvent($event)' [projectName]='formation'></app-navbar>
 <router-outlet></router-outlet>
-<br/>
-<br/>
-<h2>Présentation du Framework</h2>
 
 
-{{title}}
-
-
-<button class="btn btn-primary" (click)="display()">Cliquer</button>
-
-<img [src]="logo"/>
-
-<button class="btn btn-success">Cliquer</button>
-<button class="btn btn-danger">Cliquer</button>
-<button class="btn btn-warning">Cliquer</button>
-
-Je suis en formation : {{formation}}
-
-<ul>
-  <li *ngFor="let candidat of candidats">{{candidat|addIng}}</li>
-</ul>
-<app-list-candidat></app-list-candidat>

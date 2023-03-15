@@ -7,14 +7,21 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" routerLink="/listProviders"> Liste providers</a>
+        <a class="nav-link" routerLink="/listProviders" *ngIf="loginService.isUserLoggedIn()" > Liste providers</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" routerLink="/addProvider"> Ajouter provider</a>
+        <a class="nav-link" routerLink="/addProvider" *ngIf="loginService.isUserLoggedIn()"> Ajouter provider</a>
       </li>
+
+      <a class="nav-item nav-link" routerLink="/login"  *ngIf="!loginService.isUserLoggedIn()">Login</a>
+      <a class="nav-item nav-link" routerLink="/logout" *ngIf="loginService.isUserLoggedIn()">LogOut</a>
 
       <li class="nav-item active">
         <a class="nav-link" routerLink="/contact"> Nous contacter</a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/register"> Créer compte</a>
       </li>
 
     </ul>
@@ -24,4 +31,10 @@
     </form>
   </div>
 </nav>
+
+<h2>Current project : {{projectName}}</h2>
+
+<button class="btn btn-primary" (click)="sendEvent()">Lancer event</button>
+
+
 
